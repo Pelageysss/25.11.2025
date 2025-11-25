@@ -18,7 +18,14 @@ int lengthOfLIS(vector<int>& nums) {
     return max_len;
 }
 int main() {
-    vector<int> nums = {10, 9, 2, 5, 3, 7, 101, 18};
-    cout << lengthOfLIS(nums) << endl;
+    int n;
+    cout << "Введите количество элементов: ";
+    cin >> n;
+    vector<int> nums(n);
+    cout << "Введите элементы последовательности: ";
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+    cout << "Длина самой длинной возрастающей подпоследовательности: " << lengthOfLIS(nums) << endl;
     return 0;
 }
